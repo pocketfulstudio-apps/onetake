@@ -1,5 +1,5 @@
 :root {
-  --green: #1e3a2f;
+  --green: #1c372e;
   --terracotta: #c4573a;
   --sun: #f5b86a;
   --cream: #f8f4e8;
@@ -70,3 +70,6 @@ footer img { height: 34px; width: auto; display: block; margin: 0 auto 8px; }
   .top img { height: 36px; }
   h1 { font-size: 26px; }
 }
+
+/* Header colour matches the embedded background of the Pocketful logo. */
+.top-inner{max-width:1040px;padding:16px 24px;gap:24px}.top nav{display:flex;align-items:center;gap:24px}.top nav a{margin-left:0;white-space:nowrap}.top .brand{display:block;line-height:0}.top img{width:132px;height:44px;object-fit:contain}.download-cta{margin:20px 0}.testflight-button{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:12px 20px;background:var(--green);color:#fffdf7;border-radius:10px;font-weight:650;text-decoration:none;line-height:1.4}.testflight-button:hover{background:#1c382f}.testflight-button:focus-visible{outline:3px solid var(--terracotta);outline-offset:4px}@media(max-width:600px){.top-inner{padding:12px 16px;gap:12px}.top img{width:96px;height:32px}.top nav{gap:14px}.top nav a{font-size:14px;margin-left:0}.testflight-button{padding:12px 16px}}
