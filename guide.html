@@ -1,0 +1,175 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bilingual quick and detailed OneTake TestFlight test instructions."><title>Tester guide | OneTake · Pocketful Studio</title><link rel="icon" href="assets/favicon.ico"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="media.css"></head><body><header class="top"><div class="top-inner"><a href="index.html"><img src="assets/pocketful-logo-dark.png" alt="Pocketful Studio"></a><nav><a href="index.html">OneTake</a><a href="demo.html" aria-current="page">Videos</a><a href="support.html">Support</a></nav></div></header><main class="media-page"><div class="doc-head"><img src="assets/onetake-icon.png" alt="OneTake app icon"><div><p class="eyebrow">Pocketful Studio</p><h1 data-language="en">TestFlight tester guide</h1><h1 data-language="zh" hidden>TestFlight 测试指南</h1></div></div><p class="meta" data-language="en">One Free scan first. Then Lite, trial, Max and Restore.</p><p class="meta" data-language="zh" hidden>先完成一次免费查找，再测试 Lite、免费试用、Max 和恢复购买。</p><div class="language" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="zh" aria-pressed="false">中文</button></div><article data-language="en"><p class="summary">Six stages. Start on Free, finish with a restored Max purchase. Lite and Max purchases are free in TestFlight.</p><nav class="quick-nav"><a href="demo.html?lang=en#demo-en">Watch demo</a><a href="downloads/OneTake-Quick-EN.md" download>Download quick SOP</a><a href="downloads/OneTake-Detailed-EN.md" download>Download detailed SOP</a></nav><details><summary>View the testing flow diagram</summary><img class="flow" src="media/flow-en.svg" alt="Complete one Free scan of last year, review the results, buy Lite, start the Max trial, buy Max, and restore purchases." width="320" height="1200"></details><section id="steps-en"><h2>Follow along.</h2><p>Tick each stage as you finish. Progress stays in this browser.</p><p class="progress" aria-live="polite"><span data-count>0</span> / 6 completed</p><ol class="steps"><li><input class="check" type="checkbox" data-step="0" aria-label="One scan on Free"><details open><summary><span>One scan on Free</span></summary><p>Set Scan range → Last year and Match → Normal. Tap Scan Photos once and wait for the result. Do this before buying Lite or starting the trial.</p></details></li><li><input class="check" type="checkbox" data-step="1" aria-label="Review the results"><details><summary><span>Review the results</span></summary><p>Open a set. Tap thumbnails to compare, Zoom in for detail, and tap the large photo to change keep/delete. Use disposable photos for deletion tests; confirm Apple’s prompt only when the selection is correct.</p></details></li><li><input class="check" type="checkbox" data-step="2" aria-label="Buy Lite — free in TestFlight"><details><summary><span>Buy Lite — free in TestFlight</span></summary><p>Open Upgrade / trial, scroll to Lite, and tap Get Lite. Complete the test purchase. Check Lite is unlocked and its Owned button. Try All photos and restoring skipped sets.</p></details></li><li><input class="check" type="checkbox" data-step="3" aria-label="Start the Max trial"><details><summary><span>Start the Max trial</span></summary><p>Reopen Upgrade / trial and tap Start free trial. Check Max and the trial end date on Home. Try Custom dates, Smart pick and Mega clean. You do not need to wait three days before the next stage.</p></details></li><li><input class="check" type="checkbox" data-step="4" aria-label="Buy Max — free in TestFlight"><details><summary><span>Buy Max — free in TestFlight</span></summary><p>During the trial, tap Get Max and complete the test purchase. Check Max is unlocked and Owned. The Max label alone is not proof of purchase because the trial already shows Max.</p></details></li><li><input class="check" type="checkbox" data-step="5" aria-label="Restore and report"><details><summary><span>Restore and report</span></summary><p>Reopen OneTake and check Max is still owned. Use Restore purchases and check Restored Max. Send TestFlight feedback with build, phone/iOS, steps, expected result and actual result.</p></details></li></ol><button class="reset" type="button" data-reset>Reset checklist</button><details class="full-sop"><summary>Full step-by-step SOP</summary><div class="sop"></div><template class="sop-template"><h3>Purpose and sequence</h3>
+<p>Test the photo-review workflow and the entitlement sequence <strong>one Free scan of photos from the past year → purchased Lite → Max trial → purchased Max</strong>. Complete and review the Free scan before buying Lite or starting any trial. Then follow the purchase sequence; buying Max first prevents starting the trial.</p>
+<p><strong>Both Lite and Max purchases are FREE in TestFlight.</strong> Displayed prices are part of purchase testing. Use the beta installed through TestFlight. Test purchases do not carry over to the App Store release. <a href="https://developer.apple.com/in-app-purchase/" target="_blank" rel="noopener">Apple&#x27;s guidance</a></p>
+<h3>1. Prepare</h3>
+<ol>
+<li>Open TestFlight and install/update OneTake to the requested beta build.</li>
+<li>Record the build number, iPhone model, iOS version and test date.</li>
+<li>Prepare a few groups of similar, disposable photos. Use these for deletion tests.</li>
+<li>Start on Free, before purchasing Lite or Max or starting the trial. If the trial is unavailable, report the condition; it is stored across reinstalls.</li>
+</ol>
+<p><strong>Pass:</strong> The beta opens and the starting tier and trial eligibility are recorded.</p>
+<h3>2. Authorise photo access</h3>
+<ol>
+<li>Tap <strong>Allow photo access</strong>.</li>
+<li>Choose Full Access for the library, or select specific photos.</li>
+<li>If access was denied, tap <strong>Open Settings</strong> and update the photo permission.</li>
+<li>With limited access, verify the app explains that only selected photos are included. Use <strong>Choose more photos</strong> to expand the selection when needed.</li>
+</ol>
+<p><strong>Pass:</strong> The home screen appears and the intended test photos are accessible.</p>
+<h3>3. Complete one Free scan of the past year</h3>
+<ol>
+<li>Verify Free shows up to <strong>3 sets and 1 scan per day</strong>. Free cleaning covers photos from the past year.</li>
+<li>Choose <strong>Scan range → Last year</strong>. This first scan must cover photos from the past year.</li>
+<li>Choose <strong>Match → Normal</strong>. Strict finds closer matches; Loose groups a broader range of same-scene shots.</li>
+<li>Tap <strong>Scan Photos once</strong> while still on Free, and keep the app open until the results appear. Do not buy Lite or start the trial before this scan finishes.</li>
+<li>Record the scanned photo count and sets found. Review the results before upgrading. If none appear, record that outcome and check permissions, date range and photo suitability; continue to Lite before running another scan.</li>
+</ol>
+<p><strong>Pass:</strong> Exactly one scan was completed on Free with Last year selected, and its result was reviewed before any upgrade. Scanning alone does not delete photos.</p>
+<h3>4. Review, keep, skip and delete</h3>
+<ol>
+<li>Open a set under <strong>All</strong>.</li>
+<li>Tap thumbnails to browse. Tap <strong>Zoom in</strong>, then pinch or double-tap to inspect details; swipe between photos. For Live Photos, press and hold to replay motion.</li>
+<li>If needed, use <strong>View in All Photos (what&#x27;s before and after)</strong>, then close it to return.</li>
+<li>Check each marker: checkmark means keep; trash icon and dimming mean delete. <strong>Tap the large preview to change its selection.</strong> Thumbnail taps only change the displayed photo.</li>
+<li>Test <strong>Keep all → Next</strong> on one set, and <strong>Skip</strong> on another. Both retain the photos and put the reviewed set into skipped sets.</li>
+<li>On a disposable test set, mark only unwanted photos. Check the keeping count and <strong>Delete [number]</strong>.</li>
+<li>Tap Delete, cancel Apple&#x27;s prompt once, and verify nothing was deleted.</li>
+<li>Repeat Delete and confirm Apple&#x27;s prompt. Verify the intended photos remain and the app advances.</li>
+<li>Tap <strong>Done</strong>. Reopen available results using <strong>See last results</strong> without spending another scan.</li>
+</ol>
+<p><strong>Pass:</strong> Selections are clear, cancellation preserves photos, and confirmed deletion affects the intended photos only.</p>
+<h3>5. Test purchase Lite — FREE in TestFlight</h3>
+<ol>
+<li>Only after completing the Free scan of the past year and reviewing its result, open Home → settings → <strong>Upgrade / trial</strong>; alternatively tap the allowance chip.</li>
+<li>Do <strong>not</strong> start the trial yet. Scroll past the trial and Max cards to Lite.</li>
+<li>Tap <strong>Get Lite</strong> and complete Apple&#x27;s test purchase confirmation.</li>
+<li>Check the <strong>Lite is unlocked.</strong> confirmation. Dismiss it and check Lite&#x27;s button reads <strong>Owned</strong>.</li>
+<li>Close the upgrade screen. Verify Home shows <strong>Lite</strong>, unlimited sets and up to five scans per day, less scans already used that day.</li>
+<li>Choose <strong>Scan range → All photos</strong> and verify it is available.</li>
+<li>Open settings → <strong>Skipped sets → Show these sets again</strong>. Verify the skipped sets return to scanning. This action restores all skipped sets to review; it does not recover deleted photos.</li>
+</ol>
+<p><strong>Pass:</strong> Lite is owned; older-photo access and restoring skipped sets are unlocked.</p>
+<h3>6. Start and test the three-day Max trial</h3>
+<ol>
+<li>Reopen <strong>Upgrade / trial</strong>.</li>
+<li>Tap <strong>Start free trial</strong> under <strong>Try Max free for 3 days</strong>.</li>
+<li>Verify Home shows <strong>Max</strong> and <strong>trial until [date]</strong>. Record the displayed end date.</li>
+<li>Choose <strong>Scan range → Custom dates</strong>, set <strong>From</strong> and <strong>To</strong>, and tap <strong>Done</strong>. Both dates are included.</li>
+<li>Scan the test photos and inspect the <strong>Smart pick</strong> suggestion where shown. Review it rather than assuming it is your preferred shot.</li>
+<li>Open results and inspect Mega clean. Read the counts and keeping rule before confirming any deletion; use only disposable photos for this test.</li>
+<li>If matching-duration Live sets exist, inspect <strong>Same-length Live</strong>. Equal video duration is a grouping signal, not proof of identical content.</li>
+</ol>
+<p><strong>Pass:</strong> A dated Max trial is visible and Max-only features are available.</p>
+<p><strong>Trial expiry expectation:</strong> Because Lite was purchased first, the app should return to Lite if the trial expires before buying Max. Record any screen that incorrectly says it will return to Free. Do not wait for expiry before the next step.</p>
+<h3>7. Test purchase Max — FREE in TestFlight</h3>
+<ol>
+<li>During the active trial, reopen <strong>Upgrade / trial</strong>.</li>
+<li>Tap <strong>Get Max</strong> and complete Apple&#x27;s test purchase confirmation.</li>
+<li>Check the <strong>Max is unlocked.</strong> confirmation, then dismiss it.</li>
+<li>Check Max&#x27;s purchase button reads <strong>Owned</strong>. The Max tier label alone is insufficient because trial access already displayed Max.</li>
+<li>Close and reopen OneTake. Check Max remains owned and Max features remain available.</li>
+</ol>
+<p><strong>Pass:</strong> Max purchase is explicitly confirmed and its card shows Owned, independently of the active trial.</p>
+<h3>8. Restore and verify</h3>
+<ol>
+<li>Open <strong>Upgrade / trial → Restore purchases</strong>.</li>
+<li>Complete any expected Apple test prompt and verify <strong>Restored Max.</strong></li>
+<li>Check the intended kept photos remain. For accidental deletion, check Recently Deleted in Apple Photos promptly.</li>
+<li>Treat <strong>Freed</strong> and <strong>Can free</strong> as indicative figures, not a measurement of immediately available device storage.</li>
+</ol>
+<p><strong>Pass:</strong> Restore recognises purchased Max and retained photos are intact.</p>
+<h3>9. Report the outcome</h3>
+<p>Submit TestFlight feedback with build number, phone/iOS, starting state, exact steps, expected result, actual result and relevant screenshot/video. Record each checkpoint separately: <strong>Lite owned; trial active with end date; Max owned; Max restored; photo review/deletion correct</strong>. If purchase or trial eligibility blocks the sequence, report it rather than skipping ahead and claiming a pass.</p></template></details><div class="downloads"><a href="downloads/OneTake-Tester-Pack.zip" download>Download the tester pack</a><button type="button" class="print">Print this guide</button></div><p class="source">TestFlight purchases do not transfer to the App Store release. <a href="https://developer.apple.com/in-app-purchase/" target="_blank" rel="noopener">Apple’s TestFlight guidance</a></p></section></article><article data-language="zh" hidden><p class="summary">六个阶段：从免费版开始，最后恢复 Max 购买。TestFlight 内购买 Lite 和 Max 均免费，不会实际扣款。</p><nav class="quick-nav"><a href="demo.html?lang=zh#demo-zh">观看 Demo</a><a href="downloads/OneTake-Quick-ZH.md" download>下载精简步骤</a><a href="downloads/OneTake-Detailed-ZH.md" download>下载详细步骤</a></nav><details><summary>查看测试顺序流程图</summary><img class="flow" src="media/flow-zh.svg" alt="免费版按近一年范围查找一次，查看结果，购买 Lite，开始 Max 试用，购买 Max，最后恢复购买。" width="320" height="1200"></details><section id="steps-zh"><h2>跟着步骤测试。</h2><p>每完成一个阶段即可勾选，进度仅保存在当前浏览器。</p><p class="progress" aria-live="polite"><span data-count>0</span> / 6 项已完成</p><ol class="steps"><li><input class="check" type="checkbox" data-step="0" aria-label="免费版查找一次"><details open><summary><span>免费版查找一次</span></summary><p>选择「查找范围」→「近一年」，「匹配方式」→「标准」。点击「查找相似照片」一次，等待结果。在购买 Lite 或开始试用前完成此步骤。</p></details></li><li><input class="check" type="checkbox" data-step="1" aria-label="查看查找结果"><details><summary><span>查看查找结果</span></summary><p>打开照片组，点击缩略图进行比较，使用「放大」查看细节。轻点大图切换保留／删除状态。删除测试仅使用可丢弃照片，核对选择后再确认 Apple 系统提示。</p></details></li><li><input class="check" type="checkbox" data-step="2" aria-label="购买 Lite，TestFlight 内免费"><details><summary><span>购买 Lite，TestFlight 内免费</span></summary><p>打开「升级或免费试用」，向下找到 Lite，点击「解锁 Lite」，完成测试购买。核对「已解锁 Lite。」提示及已解锁按钮，测试「全部照片」和重新整理跳过的照片组。</p></details></li><li><input class="check" type="checkbox" data-step="3" aria-label="开始 Max 免费试用"><details><summary><span>开始 Max 免费试用</span></summary><p>再次打开「升级或免费试用」，点击「开始免费试用」。确认首页显示 Max 及试用结束日期，测试自选日期、智能优选和批量清理。下一步无需等待三天。</p></details></li><li><input class="check" type="checkbox" data-step="4" aria-label="购买 Max，TestFlight 内免费"><details><summary><span>购买 Max，TestFlight 内免费</span></summary><p>试用期间点击「解锁 Max」，完成测试购买。核对「已解锁 Max。」提示及已解锁按钮。仅显示 Max 版本不能证明购买成功，因为试用期间已经显示 Max。</p></details></li><li><input class="check" type="checkbox" data-step="5" aria-label="恢复购买并反馈"><details><summary><span>恢复购买并反馈</span></summary><p>重新打开 OneTake，确认 Max 仍已购买。点击「恢复购买」，核对「已恢复 Max。」提示。通过 TestFlight 反馈构建版本、手机／系统、操作步骤、预期及实际结果。</p></details></li></ol><button class="reset" type="button" data-reset>重置清单</button><details class="full-sop"><summary>完整分步操作流程</summary><div class="sop"></div><template class="sop-template"><h3>目的及操作顺序</h3>
+<p>测试照片整理流程，以及 <strong>免费版完成一次近一年照片查找 → 已购买 Lite → Max 试用 → 已购买 Max</strong> 的权限变化。先完成并查看免费版查找结果，再购买 Lite 或开始任何试用。随后按指定购买顺序操作；先购买 Max 后将无法开始试用。</p>
+<p><strong>TestFlight 内测试购买 Lite 和 Max 均为免费，不会实际扣款。</strong> 显示价格属于购买流程测试。请使用通过 TestFlight 安装的测试版；测试购买记录不会转入 App Store 正式版。<a href="https://developer.apple.com/in-app-purchase/" target="_blank" rel="noopener">Apple 官方说明</a></p>
+<h3>1. 测试前准备</h3>
+<ol>
+<li>打开 TestFlight，安装或更新 OneTake 至指定构建版本。</li>
+<li>记录构建版本、iPhone 型号、iOS 版本及测试日期。</li>
+<li>准备几组可丢弃的相似照片，用于测试删除。</li>
+<li>测试起点应为免费版，尚未购买 Lite 或 Max，也尚未开始试用。如无法开始试用，请记录；试用记录在重新安装后仍会保留。</li>
+</ol>
+<p><strong>通过标准：</strong> 测试版正常打开，已记录起始版本及试用资格。</p>
+<h3>2. 授权照片访问</h3>
+<ol>
+<li>点击「允许访问照片」。</li>
+<li>选择完全访问，或仅授权指定照片。</li>
+<li>如此前拒绝授权，点击「打开设置」，修改照片权限。</li>
+<li>在有限访问模式下，检查应用是否说明仅处理已授权照片；必要时点击「选择更多照片」增加范围。</li>
+</ol>
+<p><strong>通过标准：</strong> 进入首页，所需测试照片可以访问。</p>
+<h3>3. 用免费版完成一次近一年照片查找</h3>
+<ol>
+<li>检查免费版每日额度：最多清理 3 组、查找 1 次；可清理近一年照片。</li>
+<li>选择「查找范围」→「近一年」。首次查找必须使用近一年范围。</li>
+<li>选择「匹配方式」→「标准」。「严格」用于更接近的匹配；「宽松」用于范围更广的同场景匹配。</li>
+<li>在免费版中点击「查找相似照片」一次，保持应用打开，等待完成。在此次查找结束前，不要购买 Lite 或开始试用。</li>
+<li>记录扫描数量及照片组数，升级前先查看结果。如无匹配，记录该结果，并检查授权、日期范围及照片是否适合；购买 Lite 后再进行新的查找。</li>
+</ol>
+<p><strong>通过标准：</strong> 免费版已按「近一年」范围完成一次查找，并在任何升级前查看结果。查找本身不会删除照片。</p>
+<h3>4. 测试查看、保留、跳过及删除</h3>
+<ol>
+<li>在「全部」中打开一组照片。</li>
+<li>点击缩略图切换照片；点击「放大」后双指缩放或轻点两下检查细节，左右滑动比较。实况照片可按住重播动态内容。</li>
+<li>必要时点击「查看相册，看看前后拍了什么」，查看后关闭并返回。</li>
+<li>核对标记：对勾表示保留；垃圾桶及变暗画面表示待删除。<strong>轻点大图才会切换保留／删除状态。</strong> 缩略图点击仅切换当前查看的照片。</li>
+<li>对一组测试「全部保留」→「下一组」，对另一组测试「跳过」。两者均保留照片，并将已审核照片组加入跳过列表。</li>
+<li>对可丢弃的测试照片组，仅标记不需要的照片，核对保留数量和「删除 [数量] 张」。</li>
+<li>点击删除，先取消一次 Apple 系统提示，检查没有照片被删除。</li>
+<li>再次点击删除并确认系统提示，检查应保留的照片仍在，应用进入下一组。</li>
+<li>点击「完成」。通过「继续整理上次结果」重新打开可用结果，检查不消耗新的查找次数。</li>
+</ol>
+<p><strong>通过标准：</strong> 标记清晰，取消时照片不变，确认后仅删除指定照片。</p>
+<h3>5. 测试购买 Lite — TestFlight 内免费</h3>
+<ol>
+<li>仅在完成免费版近一年查找并查看结果后，进入首页设置菜单 →「升级或免费试用」，或点击额度提示。</li>
+<li>此时先不要开始试用。向下滚动，经过试用及 Max 卡片，找到 Lite。</li>
+<li>点击「解锁 Lite」，完成 Apple 测试购买确认。</li>
+<li>检查「已解锁 Lite。」提示，关闭提示后，确认 Lite 按钮显示「已解锁」。</li>
+<li>关闭升级页面，确认首页显示 Lite、清理组数不限、每日最多查找 5 次；当日已用次数会从额度中扣除。</li>
+<li>选择「查找范围」→「全部照片」，确认功能可用。</li>
+<li>打开设置 →「暂时跳过的照片组」→「重新整理这些照片组」，检查跳过的照片组重新参与查找。此操作作用于全部跳过的照片组，并非恢复已删除照片。</li>
+</ol>
+<p><strong>通过标准：</strong> Lite 已购买，旧照片访问及重新整理跳过照片组功能已解锁。</p>
+<h3>6. 开始并测试三天 Max 免费试用</h3>
+<ol>
+<li>再次打开「升级或免费试用」。</li>
+<li>在「免费试用 Max 3 天」卡片中点击「开始免费试用」。</li>
+<li>确认首页显示 Max 及「试用将于 [日期] 结束」，记录结束日期。</li>
+<li>选择「查找范围」→「自选日期」，设置起始和结束日期，点击「完成」。起止日期均包含在范围内。</li>
+<li>查找测试照片，在出现「智能优选」时检查其建议，仍需自行判断要保留的照片。</li>
+<li>在结果页检查批量清理功能。确认删除前，先阅读照片数量、组数及保留规则；仅使用可丢弃照片进行此项测试。</li>
+<li>如存在同时长实况照片组，检查「同时长实况」筛选。视频时长相同只是分组依据，不代表内容完全相同。</li>
+</ol>
+<p><strong>通过标准：</strong> 显示带结束日期的 Max 试用，Max 专属功能可用。</p>
+<p><strong>试用到期预期：</strong> 已先购买 Lite，因此如在购买 Max 前试用到期，应恢复为 Lite。如页面错误提示会恢复免费版，请记录反馈。下一步无需等待试用到期。</p>
+<h3>7. 测试购买 Max — TestFlight 内免费</h3>
+<ol>
+<li>在试用期间再次打开「升级或免费试用」。</li>
+<li>点击「解锁 Max」，完成 Apple 测试购买确认。</li>
+<li>检查「已解锁 Max。」提示并关闭。</li>
+<li>确认 Max 购买按钮显示「已解锁」。仅看到 Max 版本标签不能证明购买成功，因为试用期间已经显示 Max。</li>
+<li>关闭并重新打开 OneTake，检查 Max 仍已购买，相关功能继续可用。</li>
+</ol>
+<p><strong>通过标准：</strong> 已明确确认 Max 购买成功，且购买卡片显示已解锁，不仅是试用中的 Max 权限。</p>
+<h3>8. 恢复购买及最终检查</h3>
+<ol>
+<li>打开「升级或免费试用」→「恢复购买」。</li>
+<li>按需完成 Apple 测试提示，检查「已恢复 Max。」提示。</li>
+<li>确认应保留的照片仍在；如误删，尽快到 Apple「照片」应用的「最近删除」检查。</li>
+<li>将「已腾出」「还能腾出」作为参考，不视为设备即时可用空间的直接测量。</li>
+</ol>
+<p><strong>通过标准：</strong> 恢复购买可识别 Max，应保留的照片完整。</p>
+<h3>9. 提交测试结果</h3>
+<p>通过 TestFlight 提交构建版本、手机／系统、起始状态、准确步骤、预期结果、实际结果及必要截图／录屏。分别记录以下检查点：<strong>Lite 已购买；Max 试用已开始且有结束日期；Max 已购买；Max 已恢复；照片审核及删除正确</strong>。如购买或试用资格阻碍指定顺序，请报告问题，不要跳过后声称测试通过。</p></template></details><div class="downloads"><a href="downloads/OneTake-Tester-Pack.zip" download>下载完整测试资料</a><button type="button" class="print">打印本指南</button></div><p class="source">测试购买记录不会转入 App Store 正式版。 <a href="https://developer.apple.com/in-app-purchase/" target="_blank" rel="noopener">Apple 官方说明</a></p></section></article></main><footer><img src="assets/pocketful-logo.png" alt="Pocketful Studio">&copy; 2026 Pocketful Studio &middot; <a href="demo.html">Videos / 视频</a> &middot; <a href="guide.html">Tester guide / 测试指南</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="support.html">Support</a></footer><script>
+const storage={get(k){try{return localStorage.getItem(k)}catch{return null}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
+let checked=JSON.parse(storage.get('onetake-checks')||'[]');
+function refresh(){document.querySelectorAll('[data-step]').forEach(c=>{c.checked=checked.includes(Number(c.dataset.step));c.closest('li').classList.toggle('is-done',c.checked)});document.querySelectorAll('[data-count]').forEach(c=>c.textContent=checked.length)}
+function language(l){document.documentElement.lang=l==='zh'?'zh-CN':'en';document.querySelectorAll('[data-language]').forEach(a=>a.hidden=a.dataset.language!==l);document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));storage.set('onetake-language',l);document.querySelectorAll('video').forEach(v=>v.pause())}
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>language(b.dataset.lang));
+document.querySelectorAll('[data-step]').forEach(c=>c.onchange=()=>{const n=Number(c.dataset.step);checked=c.checked?[...new Set([...checked,n])]:checked.filter(x=>x!==n);storage.set('onetake-checks',JSON.stringify(checked));refresh()});
+document.querySelectorAll('[data-reset]').forEach(b=>b.onclick=()=>{checked=[];storage.set('onetake-checks','[]');refresh()});document.querySelectorAll('.print').forEach(b=>b.onclick=()=>{document.querySelectorAll('.full-sop').forEach(d=>{d.open=true;d.querySelector('.sop').innerHTML=d.querySelector('template').innerHTML});window.print()});
+document.querySelectorAll('.full-sop').forEach(d=>d.addEventListener('toggle',()=>{d.querySelector('.sop').innerHTML=d.open?d.querySelector('template').innerHTML:''}));
+const requested=new URLSearchParams(location.search).get('lang');language(requested==='zh'||(!requested&&storage.get('onetake-language')==='zh')?'zh':'en');refresh();
+</script></body></html>
