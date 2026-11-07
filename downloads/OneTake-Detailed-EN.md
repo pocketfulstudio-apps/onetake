@@ -54,7 +54,7 @@ Test the photo-review workflow and the entitlement sequence **one Free scan of p
 2. Do **not** start the trial yet. Scroll past the trial and Max cards to Lite.
 3. Tap **Get Lite** and complete Apple's test purchase confirmation.
 4. Check the **Lite is unlocked.** confirmation. Dismiss it and check Lite's button reads **Owned**.
-5. Close the upgrade screen. Verify Home shows **Lite**, unlimited sets and up to five scans per day, less scans already used that day.
+5. Close the upgrade screen. Verify Home shows **Lite**, 5 sets and 5 scans a day, less any already used that day.
 6. Choose **Scan range → All photos** and verify it is available.
 7. Open settings → **Skipped sets → Show these sets again**. Verify the skipped sets return to scanning. This action restores all skipped sets to review; it does not recover deleted photos.
 

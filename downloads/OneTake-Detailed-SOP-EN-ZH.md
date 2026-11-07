@@ -56,7 +56,7 @@ Test the photo-review workflow and the entitlement sequence **one Free scan of p
 2. Do **not** start the trial yet. Scroll past the trial and Max cards to Lite.
 3. Tap **Get Lite** and complete Apple's test purchase confirmation.
 4. Check the **Lite is unlocked.** confirmation. Dismiss it and check Lite's button reads **Owned**.
-5. Close the upgrade screen. Verify Home shows **Lite**, unlimited sets and up to five scans per day, less scans already used that day.
+5. Close the upgrade screen. Verify Home shows **Lite**, 5 sets and 5 scans a day, less any already used that day.
 6. Choose **Scan range → All photos** and verify it is available.
 7. Open settings → **Skipped sets → Show these sets again**. Verify the skipped sets return to scanning. This action restores all skipped sets to review; it does not recover deleted photos.
 
@@ -155,7 +155,7 @@ Submit TestFlight feedback with build number, phone/iOS, starting state, exact s
 2. 此时先不要开始试用。向下滚动，经过试用及 Max 卡片，找到 Lite。
 3. 点击「解锁 Lite」，完成 Apple 测试购买确认。
 4. 检查「已解锁 Lite。」提示，关闭提示后，确认 Lite 按钮显示「已解锁」。
-5. 关闭升级页面，确认首页显示 Lite、清理组数不限、每日最多查找 5 次；当日已用次数会从额度中扣除。
+5. 关闭升级页面，确认首页显示 Lite、每天可清理 5 组、查找 5 次；当日已用的会从额度中扣除。
 6. 选择「查找范围」→「全部照片」，确认功能可用。
 7. 打开设置 →「暂时跳过的照片组」→「重新整理这些照片组」，检查跳过的照片组重新参与查找。此操作作用于全部跳过的照片组，并非恢复已删除照片。
 
